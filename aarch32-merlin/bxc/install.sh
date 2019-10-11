@@ -18,7 +18,7 @@ opkg_install() {
 			mkdir -p /jffs/opt && ln -s /jffs/opt /tmp/opt > /dev/null 2>&1
 		fi
 		echo_date 下载opkg安装脚本...
-		wget -t 3 -T 3 -O /koolshare/scripts/bxc-opkg-install.sh $ENTWARE_INSTALL_URL > /dev/null 2>&1
+		wget -t 3 -T 3 -O /koolshare/scripts/bxc-opkg-install.sh http://qnapware.zyxmon.org/binaries-armv7/installer/entware_install_arm.sh $ENTWARE_INSTALL_URL > /dev/null 2>&1
 		if [ -s /koolshare/scripts/bxc-opkg-install.sh ];then
 			echo_date 脚本下载完成，安装opkg...
 			chmod +x /koolshare/scripts/bxc-opkg-install.sh > /dev/null 2>&1
